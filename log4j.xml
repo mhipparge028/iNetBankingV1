@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<log4j:configuration xmlns:log4j="jakarta.apache.org/log4j/" debug="false">
+      <appender name="fileAppender" class="org.apache.log4j.FileAppender">
+		  <param name="Threshold" value="INFO" />
+		  <param name="Threshold" value="logfile.log" />
+		  <layout class="org.apache.log4j.patternLayout">
+			  <param name="conversionPattern" value="%d %-5p  [%c{1}] %m %n" />
+		  </layout>
+      </appender>
+      
+   <root>
+	   <level value="INFO"/>  
+	   <appender-ref ref="fileAppender"/>
+	   </root>  
+</log4j:configuration>
